@@ -128,3 +128,14 @@
    * Node.js - Objetivo de facilitar a visualização do JavaScript fora do navegador - [Clique aqui](https://nodejs.org/en)
 ---
 ### Primeiros scripts em JS
+
+* Estudos realizados dentro da pasta _**Aulas\Aula04 - Primeiros Scripts**_
+
+* Aprendendo de maneira simples como aplicar comando básicos de JavaScript em uma página da web
+
+* Comando estudados
+   * `window.alert()` ou `alert()` -> Criação de uma caixa de alerta (_**Alert Box**_) com um botão _**OK**_
+
+   * `window.confirm()` ou `confirm()` -> Criação de uma caixa de confirmação (_**Confirmation Box**_) com um botão _**OK**_ e um botão _**Cancel**_
+
+   * `window.prompt()` ou `prompt()` -> Criação de uma caixa para inserção de texto (_**Input Box**_) com um botão _**OK**_, um botão _**Cancel**_ e uma _**opção de inserção de texto**_
