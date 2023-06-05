@@ -114,6 +114,17 @@
    * Ionic
    * Cordova (Apache)
 ---
-### Requisitos de Software
+### Primeiros passos no JS
+
+* Bibliografia - Livros sobre JavaScript
+   * JavaScript: O Guia Definitivo (David Flanagan)
+   * JavaScript - Guia do Programador (Maujor)
+   * Guia de referência JavaScript da Mozilla - [Clique aqui](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference)
+   * Guia de referência JavaScript da ECMA - [Clique aqui](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+
+* Softwares para instalação
+   * Navegador (Recomendado Google Chrome) - [Clique aqui](https://www.google.com/intl/pt-BR/chrome/)
+   * Editor de Códigos - IDE (Recomendado VS Code) - [Clique aqui](https://code.visualstudio.com/)
+   * Node.js - Objetivo de facilitar a visualização do JavaScript fora do navegador - [Clique aqui](https://nodejs.org/en)
 ---
 ### Primeiros scripts em JS
