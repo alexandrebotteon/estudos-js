@@ -206,7 +206,7 @@
 * `string` -> `number`
   * `Number.parseInt(variável)` ou `parseInt(variável)` -> Para números inteiros
 
-  * `Number.parseFloat(variável)` ou `parseFloat(variável)` -> Para número reais
+  * `Number.parseFloat(variável)` ou `parseFloat(variável)` -> Para números reais
 
   * `Number(variável)` -> Para números inteiros e números reais, com interpretação do JS
 
@@ -237,3 +237,69 @@
 * `n.toFixed(x).replace('.', ',')` -> Formata o ***número*** para uma ***quantidade de casas decimais específica***, determinada pelo valor ***x*** e ***substitui*** o '.' pela ',' do número
 
 * `n.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})` -> Formata o ***número*** inserido para o ***estilo monetário*** utilizado no ***Brasil***
+
+---
+
+### Operadores do JS (Parte 1)
+
+#### Aritméticos
+* Binários (necessitam de duas entradas de dados)
+  * `+` -> Adição de números
+
+  * `-` -> Subtração de números
+
+  * `*` -> Multiplicação de números
+
+  * `/` -> Divisão real dos números (não apresenta resto, resultado possui decimais)
+
+  * `%` -> Resto da divisão inteira (resto que sobrou de uma divisão de números)
+
+  * `**` -> Potenciação de números
+
+  > Cuidado com a precedência de operadores - Utilizar parênteses
+
+  > Ordem de precedência - **Parênteses**; **Potenciação**; **Multiplicação e Divisão**; **Adição e Subtração**
+
+#### Atribuição
+* Simples
+  * `=` -> Recebe o valor - Atribui um valor
+
+  > Exemplo: `var a = 10` -> O valor que a variável ***a*** recebe é igual a 10
+
+* Auto-atribuições
+  * `=` -> Recebe o valor - Atribui um valor
+
+  > Exemplo: `a = a + 4` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** somado o valor 4
+
+  * `+=` -> Recebe o valor atual da variável somado com o valor a frente da atribuição
+
+  > Exemplo: `a += 4` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** somado o valor 4
+
+  * `-=` -> Recebe o valor atual da variável subtraído com o valor a frente da atribuição
+
+  > Exemplo: `a -= 6` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** subtraído o valor 6
+
+  * `*=` -> Recebe o valor atual da variável multiplicado com o valor a frente da atribuição
+
+  > Exemplo: `a *= 10` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** multiplicado o valor 10
+
+  * `/=` -> Recebe o valor atual da variável dividido com o valor a frente da atribuição
+
+  > Exemplo: `a /= 2` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** dividido o valor 2
+
+  * `%=` -> Recebe o valor do resto do valor atual da variável com a divisão inteira do valor a frente da atribuição
+
+  > Exemplo: `a %= 31` -> O valor que a variável ***a*** recebe é igual ao ***resto*** do seu ***valor anterior*** dividido o valor 31
+
+  * `**=` -> Recebe o valor atual da variável potenciado com o valor a frente da atribuição
+
+  > Exemplo: `a **= 12` -> O valor que a variável ***a*** recebe é igual ao seu ***valor anterior*** potenciado com o valor 12
+
+* Incremento
+  * `++` -> Adiciona uma unidade no valor da variável
+  
+  * `--` -> Subtrai uma unidade no valor da variável
+
+  * Existem o ***pré-incremento*** e o ***pós-incremento***, assim como existe o ***pré-decremento*** e ***pós-decremento***
+ 
+  > Exemplo: `n++` -> pós-incremento | `--n` -> pré-decremento
