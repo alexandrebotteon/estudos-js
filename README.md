@@ -303,3 +303,48 @@
   * Existem o ***pré-incremento*** e o ***pós-incremento***, assim como existe o ***pré-decremento*** e ***pós-decremento***
  
   > Exemplo: `n++` -> pós-incremento | `--n` -> pré-decremento
+
+---
+
+### Operadores do JS (Parte 2)
+
+> Os ***operadores aritméticos***, ***operadores relacionais*** e ***operadores lógicos*** também possuem ordem de precedência, seguindo respectivamente a ordem informada
+
+#### Relacionais
+* `>` -> Operador maior
+
+* `<` -> Operador menor
+
+* `>=` -> Operador maior ou igual
+
+* `<=` -> Operador menor ou igual
+
+* `==` -> Operador igualdade
+
+* `!=` -> Operador diferente ou não igual
+
+* `===` -> Operador identidade ou de igualdade restrita - Verifica a igualdade do valor de grandeza e o tipo das entradas na operação
+
+* `!==` -> Operador identidade ou de desigualdade restrita - Verifica a desigualdade do valor de grandeza e o tipo das entradas na operação
+
+> Para toda expressão que possui **operadores relacionais**, seu resultado será **booleano (true ou false)**
+
+> A ordem de precedência dos ***operadores relacionais*** se encontra da esquerda para direita com a leitura do código
+
+#### Lógicos
+* Unários (necessitam de uma entrada de dados)
+  * `!` -> Operador de negação (operador unário - possui apenas uma entrada)
+
+* Binários (necessitam de duas entradas de dados)
+  * `&&` -> Operador de conjunção - Conhecido como o operador ***e***
+
+  * `||` -> Operador de disjunção - Conhecido como o operador ***ou***
+
+> Para toda expressão que possui **operadores lógicos**, seu resultado será **booleano (true ou false)**
+
+> A ordem de precedência dos ***operadores lógicos*** é: `!`, `&&` e `||` respectivamente
+
+#### Ternário
+* `?` e `:` -> Os operadores ternários se baseiam em três entradas de dados `teste ? true : false`
+
+> O ***resultado booleano (true ou false) do teste*** irá informar o que ocorrerá com a expressão, sendo a primeira opção ***true*** e a segunda ***false***
