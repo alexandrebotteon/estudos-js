@@ -167,7 +167,7 @@
 * É possível usar ***letras*** ou ***números***
 * É possível usar ***acentos*** e ***símbolos***
 * Não podem conter ***espaços*** (utilizar sempre ***_***)
-* Não podem ser ***avras reservadas*** pelo JS
+* Não podem ser ***palavras reservadas*** pelo JS
 
 #### Dicas para a criação de Identificadores
 * Letras ***maiúsculas*** e ***minúsculas*** fazem diferença
@@ -187,3 +187,53 @@
 * `boolean` -> Tipo de variável que recebe valores de ***verdadeiro*** (`true`) ou ***falso*** (`false`)
 
 * Para verificar o tipo da variável ou valor, utilizamos o comando `typeof`
+
+---
+
+### Manipulação de Dados
+
+* Estudos realizados dentro da pasta ***Aulas\Aula06 - Tratamento de Dados***
+
+#### Concatenação
+* Ligação entre o texto e uma variável
+
+* `+` -> Utilizado para concatenar ou realizar a adição em JS
+  * `string + string` -> Concatenação
+
+  * `number + number` -> Adição
+
+#### Conversão de Variáveis
+* `string` -> `number`
+  * `Number.parseInt(variável)` ou `parseInt(variável)` -> Para números inteiros
+
+  * `Number.parseFloat(variável)` ou `parseFloat(variável)` -> Para número reais
+
+  * `Number(variável)` -> Para números inteiros e números reais, com interpretação do JS
+
+* `number` -> `string`
+  * `String(variável)` -> Para string
+
+  * `variável.toString()` -> Para string
+
+#### Formatação de Strings
+* Template String (Formatador de Strings)
+  * `${variável}` -> Placeholder utilizado para digitar uma String de maneira mais simples
+
+  * \` texto \` -> As crases são utilizadas neste momento para realizar a formatação
+
+  * `Seja bem-vindo ${nome}` -> Este código retornará a mensagem com o valor que estiver armazenado na variável ***nome***
+
+  > Concatenação e Template String estão corretos na utilização 
+
+* `s.length()` -> Identifica a ***quantidade de caracteres*** que a ***string*** possui
+  
+* `s.toUpperCase()` -> Transforma o conteúdo da ***string*** em ***caixa alta*** (maiúsculas)
+
+* `s.toLowerCase()` -> Transforma o conteúdo da ***string*** em ***caixa baixa*** (minúsculas)
+
+#### Formatação de Números (Number)
+* `n.toFixed(x)` -> Formata o ***número*** para uma ***quantidade de casas decimais específicas***, determinada pelo valor ***x***
+
+* `n.toFixed(x).replace('.', ',')` -> Formata o ***número*** para uma ***quantidade de casas decimais específica***, determinada pelo valor ***x*** e ***substitui*** o '.' pela ',' do número
+
+* `n.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})` -> Formata o ***número*** inserido para o ***estilo monetário*** utilizado no ***Brasil***
