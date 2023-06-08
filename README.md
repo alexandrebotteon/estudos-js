@@ -578,3 +578,69 @@
 > Em alguns casos, irá acontecer do erro não ser exibido no código explicitamente, então para verificá-lo, podemos abrir o ***inspecionar no navegador*** e visualizar o ***Console***. Nele será indicado o erro que está sendo ocasionado em seu Script
 
 > Em alguns casos, o erro irá estar ***explícito*** dentro do código, facilitando assim sua manutenção
+
+---
+
+## Condições em JS
+
+### Condições (Parte 1)
+
+* Estudos realizados dentro da pasta ***Aulas\Aula11 - Condições (Parte 1)***
+
+* Sequências são a ordem em que comandos/linhas são executados
+
+* Para realizar comandos em ordens diferentes ou alterar o percurso de execução, utilizamos as ***Condições***
+  * Com a criação das ***Condições***, inserimos ***bifurcações*** dentro de nossos códigos
+
+#### Condições simples e compostas
+* A condição mais conhecida dentro do JavaScript é a `if` ou também chamada de 'se' - Esta condição determina o `bloco` a ser executado após a verificação de seus parâmetros
+
+* Caso a condição `if` esteja incorreta, realizamos o que chamamos de `else` ou 'senão', executando apenas o seu `bloco`
+
+* **Condição Simples**
+  * Para uma condição ser denominada como ***simples***, elá terá apenas a presença de um `bloco`
+
+  * Desta maneira, sua estrutura se baseará apenas na condição `if` -> `if (condição){ }` - O `bloco` apenas será executado, caso a condição do `if` esteja com o valor `true`
+
+* **Condição Composta**
+  * Para uma condição ser denominada como ***composta***, elá terá a presenção de dois `blocos`
+
+  * Desta maneira, sua estrutura se baseia na condição `if/else` -> `if (condição){ } else{ }` - Possuímos dois `blocos`, onde o primeiro será executado caso o valor do `if` seja `true` e o segundo `bloco`, caso seja `false`
+
+> Para executar comando em um arquivo JavaScrpit `.js` dentro do ***Node.js através do VS Code***. Podemos utilizar a extensão ***Node Exec***, que permite através do atalho `F8`, executarmos diretamente os comandos no Node.js
+
+> Para escrevermos algo dentro do ***console do Node.js***, usamos o comando `console.log()`
+
+* Exemplo Condição - Simples
+```
+var vel = 50
+console.log(`A velocidade do seu carro é ${vel}km/h`)
+
+if(vel > 60){ // Condição Simples
+    console.log('Você ultrapassou a velocidade permitida. MULTADO!')
+}
+
+console.log('Dirija sempre usando cinto de segurança!')
+```
+> Nesta condição, estamos verificando através do `if`, se a variável `vel` ('velocidade') é maior que 60
+
+> Caso seu valor seja maior que 60km/h, será executado o `bloco` e apresentada a mensagem `Você ultrapassou a velocidade permitida. MULTADO!`, seguindo posteriormente o código
+
+> Caso seu valor seja igual ou abaixo de 60km/h, o `bloco` será ignorado e o código seguirá sendo executado normalmente
+
+* Exemplo Condição - Composta
+```
+var país = 'Brasil'
+console.log(`Vivendo em ${país}`)
+
+if(país == 'Brasil'){
+    console.log('Você é Brasileiro!')
+} else{
+    console.log('Você é Estrangeiro!')
+}
+```
+> Nesta condição, estamos verificando através do `if/else`, se a variável `país` é igual a 'Brasil'
+
+> Caso seu valor seja igual a 'Brasil', o `primeiro bloco` será executado e a mensagem 'Você é Brasileiro' será apresentada na tela
+
+> Caso seu valor seja diferente de 'Brasil', o `segundo bloco` será executado e a mensagem 'Você é Estrangeiro' será apresentada na tela
