@@ -413,3 +413,168 @@
   * `querySelectorAll()` -> Comando localizado dentro do `document` para selecionar ***todos os objetos por seus Seletores***
 
 > A seleção através de Seletores é recomendável e uma maneira mais recente de selecionar os objetos adequadamente
+
+---
+
+### Eventos DOM
+
+* Estudos realizados dentro da pasta ***Aulas\Aula10 - Eventos DOM***
+
+* Eventos são todas as opções de acontecimentos que podem ser realizados com ou pelos elementos
+
+> O mais comum evento que utilizamos, são eventos de ***mouse***
+
+* Para localizar a lista de eventos DOM fornecida pela Mozilla
+  * [Clique Aqui](https://developer.mozilla.org/pt-BR/docs/Web/Events) para pt-br
+
+  * [Clique Aqui](https://developer.mozilla.org/en-US/docs/Web/Events) para en-us
+
+#### Funções
+* Conjunto de códigos/linhas que serão executados apenas quando o evento ocorrer
+  * Os códigos estarão dentro de '{ }' para que sejam interpretados como um `bloco`
+
+  * Este `bloco` precisa do `function` antes de abrir as '{ }'
+
+  * Normalmente, após `function`, virá o nome da ação que ela irá realizar e os '( )'
+  > Exemplo: `function ação(){}` -> ***Bloco de função*** com o nome de ***'ação'***
+
+  * É possível também, opcionalmente, colocar parâmetros dentro dos '( )' da `function`
+
+> Os eventos podem ser configurados dentro do HTML ou dentro dos Scripts
+
+> Caso seja criada uma `var` dentro de uma `function`, ela será utilizada apenas dentro da mesma
+
+* Exemplos de eventos
+  * `onclick` -> Ao clicar com o mouse - Quando há um clique do mouse no elemento
+
+  * `onmouseenter` -> Ao mouse entrar - Quando o mouse se encontra dentro do elemento
+
+  * `onmouseout` -> Ao mouse sair - Quando o mouse se encontra fora do elemento, após já ter entrado
+
+* Exemplo de código - Utilizando os disparos através do HTML
+```
+<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+
+    Interaja...
+
+</div>
+
+<script>
+
+    var area = window.document.getElementById('area')
+
+    function clicar(){
+
+        area.innerText = 'Clicou!'
+        area.style.backgroundColor = 'red'
+
+    }
+
+    function entrar(){
+
+        area.innerText = 'Entrou!'
+
+    }
+
+    function sair(){
+
+        area.innerText = 'Saiu!'
+        area.style.backgroundColor = 'green'
+
+    }
+
+</script>
+```
+> Neste código a `div` de `id = 'area'`, realiza alguns eventos de interação com o mouse
+
+> `onclick` -> A `div` altera seu texto para 'Clicou!' e deixa a cor de seu fundo em vermelho
+
+> `onmouseenter` -> A `div` altera seu texto para 'Entrou!'
+
+> `onmouseout` -> A `div` altera seu texto para 'Saiu!' e deixa a cor de seu fundo em verde
+
+* Exemplo de código - Utilizando os disparos através do Script
+```
+<div id="area">
+
+    Interaja...
+
+</div>
+
+<script>
+
+    var area = window.document.getElementById('area')
+
+    area.addEventListener('click', clicar)
+    area.addEventListener('mouseenter', entrar)
+    area.addEventListener('mouseout', sair)
+
+    function clicar(){
+
+        area.innerText = 'Clicou!'
+        area.style.backgroundColor = 'red'
+
+    }
+
+    function entrar(){
+
+        area.innerText = 'Entrou!'
+
+    }
+
+    function sair(){
+
+        area.innerText = 'Saiu!'
+        area.style.backgroundColor = 'green'
+
+    }
+
+</script>
+```
+> Neste código utilizamos outro método de disparo, através do comando `.addEventListener()`
+
+> Este comando é utilizado para criar um ***EventListener*** que identifica se o evento ocorreu para acionar as funções determinadas
+
+> As funções possuem as mesmas interações com a `div`
+
+* Exemplo de código para Soma de Números - Utilizando os disparos através do Script
+```
+<h1>Somando Valores</h1>
+
+<input type="number" name="txtn1" id="txtn1"> +
+<input type="number" name="txtn2" id="txtn2">
+<input type="button" id="somar" value="Somar">
+
+<div id="res">Resultado</div>
+
+<script>
+
+    var btn = window.document.querySelector('input#somar')
+
+    btn.addEventListener('click', somar)
+
+    function somar(){
+
+        var n1 = Number(window.document.querySelector('input#txtn1').value)
+        var n2 = Number(window.document.querySelector('input#txtn2').value)
+        var res = window.document.querySelector('div#res')
+        var s = n1 + n2
+
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+
+    }
+
+</script>
+```
+> Neste exemplo, estamos utilizando `input` para a inserção de valores pelo usuário e um botão com o `value` 'Somar' para somar os números
+
+> Dentro do Script, foi inserido um `.addEventListener` ao botão, para que assim que o evento `onclick` seja efetuado, a `function` 'somar' seja executada
+
+> Na `function` estamos captando os valores das caixas de texto 'txtn1' e 'txtn2', para tratarmos os dados adequadamente para assim somá-los e apresentá-los dentro da `div` 'res'
+
+#### Erros em um Script
+* Em caso de erros dentro de um Script, ao executá-lo não irá realizar adequadamente o que foi programado
+
+> Em alguns casos, irá acontecer do erro não ser exibido no código explicitamente, então para verificá-lo, podemos abrir o ***inspecionar no navegador*** e visualizar o ***Console***. Nele será indicado o erro que está sendo ocasionado em seu Script
+
+> Em alguns casos, o erro irá estar ***explícito*** dentro do código, facilitando assim sua manutenção
