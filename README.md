@@ -348,3 +348,68 @@
 * `?` e `:` -> Os operadores ternários se baseiam em três entradas de dados `teste ? true : false`
 
 > O ***resultado booleano (true ou false) do teste*** irá informar o que ocorrerá com a expressão, sendo a primeira opção ***true*** e a segunda ***false***
+
+---
+
+## Entendendo o DOM - Módulo C
+
+### Introdução ao DOM
+
+* Estudos realizados dentro da pasta ***Aulas\Aula09 - Introdução ao DOM***
+
+> Em primeiro lugar, para melhor aprendizado, sugere-se instalar a extensão ***LiveServer*** em seu VS Code
+
+> Para utilizá-la, basta clicar com o ***botão direito*** em seu código e encontrar a opção ***Open with LiveServer*** ou pode-se clicar no botão ***Go Live*** localizado no ***canto inferior direito*** do VS Code
+
+#### O que é DOM
+* Sua sliga significa ***Document Object Model*** - **Modelo de objetos para documentos**
+
+* O DOM se localiza dentro do navegador para a execução do JavaScript
+
+#### Árvore DOM
+* A árvore DOM se baseia em uma árvore hierárquica para apresentar os componentes que fazem parte do seu site
+  * Os componentes podem ser considerados ***child*** -> Quando se encontram abaixo de algum item da lista, sendo suas 'crianças'
+
+  * Ou os componentes podem ser considerados ***parents*** -> Quando se encontram acima de algum item da lista, sendo seus 'pais'
+
+  > Exemplo: `html` -> `head`; `body`
+
+  > Neste exemplo, o **'html'** é o ***parent*** dos componentes **'head'** e **'body'**, que são os ***child***
+
+> Lembre-se do DOM, assim como mexemos em nossos documentos dentro de pastas, onde há o caminho até o arquivo específico. Este caminho nos ajuda a encontrar informações do nosso ou de outro site usando o DOM
+
+#### Tipos de seleção (DOM)
+* Marca (TAG)
+  * `getElementsByTagName()` -> Comando localizado dentro do `document` para selecionar ***um ou mais objetos por suas TAGs***
+
+  > Exemplo: `var p1 = window.document.getElementsByTagName('p')[0]` -> Neste exemplo, está sendo ***selecionado o primeiro parágrafo (p)*** do documento html - Para selecionarmos o primeiro, ***usamos os '[]' após o código e indicamos qual das TAGs será selecionada (iniciando em 0 e indo até o valor máximo de TAGs do documento)***
+  
+  > Podemos utilizar posteriormente `window.document.write(p1.innerText)` -> Para que seja ***escrito no documento*** o valor localizado dentro da ***variável p1***
+
+  > Caso ele possua outras TAGs de formatação de texto dentro do parágrafo, podemos utilizar `window.document.write(p1.innerHTML)`
+
+* ID
+  * `getElementById()` -> Comando localizado dentro do `document` para selecionar ***um objeto por seu ID***
+
+  > IDs dentro do HTML são únicos, então não há como selecionar vários de uma só vez
+
+* Nome
+  * `getElementsByName()` -> Comando localizado dentro do `document` para selecionar ***um ou mais objetos por seu Name***
+
+  > Assim como TAGs, os Names podem ser repetidos dentro do HTML, por isso é recomendado definir qual será selecionado como visto anteriormente
+
+* Classe
+  * `getElementsByClassName()` -> Comando localizado dentro do `document` para selecionar ***um ou mais objetos por sua Classe***
+
+  > Classes também são possíveis de se repetirem dentro do HTML
+
+* Seletor (CSS)
+  * `querySelector()` -> Comando localizado dentro do `document` para selecionar ***um objeto por seu Seletor***
+
+  > Exemplo: `var d = window.document.querySelector('div#msg')` -> Neste exemplo, a ***variável d*** está recebendo o ***valor apresentado dentro da div com ID 'msg'***
+
+  > Nota-se que no CSS para ID, utilizamos o '#' e para Classes utilizamos o '.'
+
+  * `querySelectorAll()` -> Comando localizado dentro do `document` para selecionar ***todos os objetos por seus Seletores***
+
+> A seleção através de Seletores é recomendável e uma maneira mais recente de selecionar os objetos adequadamente
