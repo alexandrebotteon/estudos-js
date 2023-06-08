@@ -8,7 +8,31 @@
 </head>
 <body>
 
+    <h1>Verificando nacionalidade</h1>
+    Digite o país onde reside: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" id="verificar" value="Verificar">
+    <div id="res">
 
+    </div>
+
+    <script>
+
+        var btn = window.document.querySelector('input#verificar')
+        btn.addEventListener('click', verificar)
+
+        function verificar(){
+            var pais = window.document.querySelector('input#txtpais').value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Você reside em ${pais}</p>`
+
+            if(pais == 'Brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            } else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            }
+        }
+
+    </script>
 
 </body>
 </html>
