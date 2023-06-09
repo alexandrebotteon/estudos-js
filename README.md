@@ -644,3 +644,64 @@ if(país == 'Brasil'){
 > Caso seu valor seja igual a 'Brasil', o `primeiro bloco` será executado e a mensagem 'Você é Brasileiro' será apresentada na tela
 
 > Caso seu valor seja diferente de 'Brasil', o `segundo bloco` será executado e a mensagem 'Você é Estrangeiro' será apresentada na tela
+
+---
+
+### Condições (Parte 2)
+
+* Estudos realizados dentro da pasta ***Aulas\Aula12 - Condições (Parte 2)***
+
+#### Condições Aninhadas
+* Condições compostas conectadas uma a outra, onde em um de seus resultados `true` ou `false`, irá realizar novas verificações para apresentação de uma execução final
+
+* São em sua maioria dividas em níveis, onde começam a partir do nível 2 (duas condições conectadas) e não possuem um limite de níveis
+
+* Exemplo de código de uma condição aninhada
+```
+if (condição 1){
+  // bloco 1
+} else if (condição 2){
+  // bloco 2
+} else {
+  // bloco 3
+}
+```
+> Neste exemplo, temos três `blocos`
+
+> O `bloco 1`, será executado no caso da `condição 1` possuir valor `true`
+
+> O `bloco 2`, será executado no caso da `condição 1` possuir valor `false` e a `condição 2` possuir valor `true`
+
+> O `bloco 3`, será executado no caso da `condição 1` e da `condição 2` possuirem o valor `false`
+
+#### Condições Múltiplas
+* A condição múltipla é utilizada em caso de ***valores fixos***, sendo assim, quando queremos verificar se o valor está dentro de alguma opção específica e assim executar um `bloco`
+
+* Exemplo de código de uma condição múltipla
+```
+switch (expressão){
+  case valor 1:
+    // bloco 1
+    break
+  case valor 2:
+    // bloco 2
+    break
+  case valor 3:
+    // bloco 3
+    break
+  default:
+    // bloco 4
+    break
+}
+```
+> Neste exemplo, verificamos a estrutura de um código `switch/case`, conhecido também como 'escolha/caso'
+
+> É possível identificar que no `switch/case` utilizamos uma ***expressão*** no lugar de uma condição, onde o valor desta expressão será verificado e identificado dentro dos 'casos' que possuímos
+
+> Caso não haja um valor fixo que esteja de acordo com a expressão, utilizamos o valor `default`
+
+> Em todos os 'casos' que incluirmos em nosso código, é necessário adicionar o comando `break` no fim de seu `bloco`, para que ele prossiga executando as demais linhas de comandos
+
+---
+
+### Exercícios para Fixação
