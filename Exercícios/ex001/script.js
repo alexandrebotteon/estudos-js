@@ -1,3 +1,5 @@
+window.document.onload = carregar()
+
 function carregar(){
     var msg = window.document.querySelector('div#msg')
     var foto = window.document.querySelector('img#img')
