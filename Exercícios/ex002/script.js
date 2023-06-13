@@ -9,17 +9,14 @@ function verificar(){
     if (nasc == 0 || nasc > ano){
         window.alert('[ERRO] Verifique os dados!')
     } else{
-        var sexo = window.document.getElementsByName('txtsex')
         var idade = ano - nasc
         var genero = ''
 
-        if (sexo[0].checked){
+        if (document.getElementById('masc').checked){
             genero = 'Masculino'
-        } else {
+        } else if (document.getElementById('fem').checked) {
             genero = 'Feminino'
         }
-
-        console.log(genero)
     }
 
 }
