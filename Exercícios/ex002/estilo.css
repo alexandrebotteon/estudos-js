@@ -22,3 +22,9 @@ footer{
     text-align: center;
     font-style: italic;
 }
+
+#img {
+    width: 250px;
+    border-radius: 250px;
+    padding: 20px;
+}
